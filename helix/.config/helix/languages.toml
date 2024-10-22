@@ -1,0 +1,45 @@
+[[language]]
+name = "go"
+auto-format = false
+indent = { tab-width = 4, unit = "    " }
+
+[[language]]
+name = "zig"
+auto-format = false
+indent = { tab-width = 4, unit = "    " }
+
+[[language]]
+name = "rust"
+auto-format = false
+indent = { tab-width = 4, unit = "    " }
+
+[[language]]
+name = "c"
+auto-format = false
+indent = { tab-width = 4, unit = "    " }
+
+[[language]]
+name = "cpp"
+auto-format = false
+indent = { tab-width = 4, unit = "    " }
+
+[[language]]
+name = "hyprlang"
+auto-format = false
+indent = { tab-width = 4, unit = "    " }
+
+[language-server.rust-analyzer]
+command = "rust-analyzer"
+
+[language-server.rust-analyzer.config]
+inlayHints.bindingModeHints.enable = false
+inlayHints.closingBraceHints.minLines = 10
+inlayHints.closureReturnTypeHints.enable = "with_block"
+inlayHints.discriminantHints.enable = "fieldless"
+inlayHints.lifetimeElisionHints.enable = "skip_trivial"
+inlayHints.typeHints.hideClosureInitialization = false
+
+[languages]
+javascript = { lsp = "typescript-language-server --stdio" }
+typescript = { lsp = "typescript-language-server --stdio" }
+

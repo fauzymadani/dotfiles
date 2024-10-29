@@ -143,7 +143,9 @@ PS1="${GruvboxRed}[ ${GruvboxGreen}\u${GruvboxYellow}@${GruvboxBlue}\h${GruvboxP
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 export PATH="$PATH:/snap/bin"
 export PATH="/usr/bin:$PATH"
-alias ls='lsd'
+# alias ls='lsd'
+alias n='nvim'
+alias v='vim'
 PATH=~/.console-ninja/.bin:$PATH
 
 export XDG_DATA_DIRS="/home/linuxbrew/.linuxbrew/share:$XDG_DATA_DIRS"
@@ -152,7 +154,7 @@ export XDG_DATA_DIRS="/home/linuxbrew/.linuxbrew/share:$XDG_DATA_DIRS"
 
 #-------starship
 # eval "$(starship init bash)"
-export LS_COLORS="$(vivid generate lava)"
+# export LS_COLORS="$(vivid generate lava)"
 export PATH=$PATH:/home/fauzy/.nvm/versions/node/v20.17.0/bin
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm

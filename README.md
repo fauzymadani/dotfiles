@@ -16,6 +16,11 @@ git clone https://github.com/fauzymadani/dotfiles.git
 cd dotfiles
 stow i3 #example
 ```
-
+> [!IMPORTANT]  
+> ## Crucial information necessary for nvim-nvchad configuration
+special for this configuration, i'm not creating symlink with stow. `i'm too lazy for moving my config for stow`. so when you're facing an error when trying to use this configuration with stow, it means you have to move the configuration files yourself.
+```bash
+mv ~/dotfiles/nvim-nvchad/* ~/.config/nvim/
+```
 ## Activity
 ![Alt](https://repobeats.axiom.co/api/embed/5ba5f29cccfc8a53d092ff53efe89d020c42fc97.svg "Repobeats analytics image")

@@ -16,6 +16,17 @@ for _, lsp in ipairs(servers) do
   }
 end
 
+lspconfig.intelephense.setup {
+    -- Pilih konfigurasi sesuai kebutuhan
+    settings = {
+        intelephense = {
+            format = {
+                enable = true,  -- Aktifkan format
+            },
+        },
+    },
+}
+
 -- configuring single server, example: typescript
 -- lspconfig.ts_ls.setup {
 --   on_attach = nvlsp.on_attach,

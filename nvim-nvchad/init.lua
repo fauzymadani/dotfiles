@@ -36,3 +36,11 @@ require("custom.configs.alpha")
 vim.schedule(function()
   require "mappings"
 end)
+
+vim.api.nvim_create_autocmd("BufWritePre", {
+    pattern = { "*.js", "*.jsx", "*.ts", "*.tsx", "*.html", "*.css", "*.php" },
+    callback = function()
+        vim.lsp.buf.format() -- Menggunakan format() sebagai pengganti formatting_sync
+    end,
+})
+

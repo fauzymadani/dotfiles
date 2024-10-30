@@ -1,7 +1,8 @@
--- Keyboard users
+return {
+  "nvchad/menu" , lazy = true, -- Keyboard users
 vim.keymap.set("n", "<C-t>", function()
   require("menu").open("default")
-end, {})
+end, {}),
 
 -- mouse users + nvimtree users!
 vim.keymap.set("n", "<RightMouse>", function()
@@ -10,3 +11,4 @@ vim.keymap.set("n", "<RightMouse>", function()
   local options = vim.bo.ft == "NvimTree" and "nvimtree" or "default"
   require("menu").open(options, { mouse = true })
 end, {})
+}

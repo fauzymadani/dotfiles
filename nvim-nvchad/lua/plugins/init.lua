@@ -30,7 +30,14 @@ return {
       lspconfig.clangd.setup{}
     end,
   },
-
+  { "nvchad/volt" , lazy = true },
+  {
+    "nvchad/menu",
+    config = function()
+    require "plugins.menu"
+    end,
+    lazy = true
+  },
   -- Plugin Treesitter (jika ingin menggunakannya)
   -- {
   --   "nvim-treesitter/nvim-treesitter",

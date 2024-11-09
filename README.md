@@ -22,5 +22,26 @@ special for this configuration, i'm not creating symlink with stow. `i'm too laz
 ```bash
 mv ~/dotfiles/nvim-nvchad/* ~/.config/nvim/
 ```
+
+> [!IMPORTANT]  
+if you struggled for finding app class for exclude in picom.conf for example, try:
+```bash
+xprop | grep WM_CLASS
+#and then select the app
+```
+example output:
+```bash
+[ fauzy@debian ]: ~ $ xprop | grep WM_CLASS
+WM_CLASS(STRING) = "Navigator", "firefox-esr"
+```
+and then put the `WM_CLASS` in the picom.conf for example:
+```conf
+opacity-rule = [
+    "90:class_g = 'Google-chrome'",
+    "90:class_g = 'firefox-esr'",
+    "90:class_g = 'Navigator'"
+];
+```
+
 ## Activity
 ![Alt](https://repobeats.axiom.co/api/embed/5ba5f29cccfc8a53d092ff53efe89d020c42fc97.svg "Repobeats analytics image")

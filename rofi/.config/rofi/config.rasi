@@ -2,7 +2,7 @@
     font: "Figtree 13";
     g-spacing: 10px;
     g-margin: 0;
-    b-color: #000000FF;
+    b-color: #282828;
     fg-color: #FFFFFFFF;
     fgp-color: #888888FF;
     b-radius: 8px;

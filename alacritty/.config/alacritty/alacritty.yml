@@ -20,7 +20,7 @@ window:
 font:
   normal:
     family: JetBrains Mono Nerd Font
-    style: Medium
+    style: Regular 
   bold:
     family: JetBrains Mono Nerd Font
     style: Bold

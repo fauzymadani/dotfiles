@@ -89,6 +89,7 @@ fi
 # some more ls aliases
 alias ll='ls -l'
 alias la='ls -A'
+alias lh='ls -lah'
 #alias l='ls -CF'
 alias buat='mkdir'
 
@@ -118,7 +119,8 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" # This loads nvm bash_completion
 
 #add neofetch on startup
-# figlet -c -f ~/.local/share/fonts/figlet-fonts/3d.flf "fauzy" | lolcat
+neofetch
+#figlet -c -f ~/.local/share/fonts/figlet-fonts/3d.flf "debian" | lolcat
 
 #custom session-----------------------------------------------------------------------
 # PS1='\[\033[01;32m\]┌──${debian_chroot:+($debian_chroot)}(\[\033[01;36m\]\u\[\033[01;34m\]@\[\033[01;36m\]\h\[\033[01;32m\])-[\[\033[01;34m\]\w\[\033[01;32m\]]\n└─\[\033[00m\]\$ '
@@ -146,11 +148,14 @@ export PATH="/usr/bin:$PATH"
 # alias ls='lsd'
 alias n='nvim'
 alias v='vim'
+alias nconf='cd ~/.config/nvim/'
+alias zellij='~/./zellij'
 PATH=~/.console-ninja/.bin:$PATH
 
 export XDG_DATA_DIRS="/home/linuxbrew/.linuxbrew/share:$XDG_DATA_DIRS"
 . "$HOME/.cargo/env"
 # export PATH="$HOME/.cargo/bin:$PATH"
+export PATH="$HOME/.config/emacs/bin:$PATH"
 
 #-------starship
 # eval "$(starship init bash)"

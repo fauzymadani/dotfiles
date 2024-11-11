@@ -16,6 +16,14 @@ git clone https://github.com/fauzymadani/dotfiles.git
 cd dotfiles
 stow i3 #example
 ```
+> [!WARNING]
+> Critical content demanding immediate user attention due to potential risks.
+
+the nvchad config in this repository is deprecated and no longer updated, see 
+<a href="https://github.com/fauzymadani/nvchad-config">here</a> instead.
+
+<hr>
+
 > [!IMPORTANT]  
 > ## Crucial information necessary for nvim-nvchad configuration
 special for this configuration, i'm not creating symlink with stow. `i'm too lazy for moving my config for stow`. so when you're facing an error when trying to use this configuration with stow, it means you have to move the configuration files yourself.

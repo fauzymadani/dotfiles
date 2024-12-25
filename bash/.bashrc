@@ -90,8 +90,11 @@ fi
 alias ll='ls -l'
 alias la='ls -A'
 alias lh='ls -lah'
-#alias l='ls -CF'
-alias buat='mkdir'
+alias l='ls -CF'
+alias h='hx'
+alias k='kak'
+alias e='emacs'
+alias em='emacs -nw'
 
 # Alias definitions.
 # You may want to put all your additions into a separate file like
@@ -119,7 +122,7 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" # This loads nvm bash_completion
 
 #add neofetch on startup
-neofetch
+# neofetch
 #figlet -c -f ~/.local/share/fonts/figlet-fonts/3d.flf "debian" | lolcat
 
 #custom session-----------------------------------------------------------------------
@@ -135,7 +138,8 @@ GruvboxAqua='\[\e[38;5;108m\]'       # Soft Aqua
 GruvboxBackground='\[\e[48;5;235m\]' # Background (if needed)
 NC='\[\e[0m\]'                       # No Color / Reset
 
-PS1="${GruvboxRed}[ ${GruvboxGreen}\u${GruvboxYellow}@${GruvboxBlue}\h${GruvboxPurple} ]${GruvboxAqua}:${GruvboxYellow} \w${NC} \\$ "
+PS1="${GruvboxRed}[ ${GruvboxGreen}\u${GruvboxYellow}@${GruvboxBlue}\h${GruvboxPurple} ]${GruvboxAqua}:${GruvboxYellow} \W${NC} \\$ "
+#PS1="${GruvboxRed}[ ${GruvboxGreen}\u${GruvboxYellow}@${GruvboxBlue}\h${GruvboxPurple} ]${GruvboxAqua}:${GruvboxYellow}  \W${NC} \\$ "
 
 # PS1="${Red}[ ${Blue}\u@\h${Red} ]${NC}: ${Red}\w${NC} \\$ "
 ##PS1
@@ -165,5 +169,10 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib
 export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig:$PKG_CONFIG_PATH
-export PATH="$HOME/.local/bin:$PATH"
+#export PATH="$HOME/.local/bin:$PATH"
 export PROMPT_COMMAND=""
+export PATH=$PATH:/home/fauzy/.nvm/versions/node/v20.17.0/bin
+export PATH="$HOME/.local/bin:$PATH"
+export PATH="$HOME/myenv/bin:$PATH"
+export PATH="$HOME/.composer/vendor/bin:$PATH"
+

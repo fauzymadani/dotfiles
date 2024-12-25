@@ -9,18 +9,23 @@ call plug#begin('~/.vim/plugged')
 	Plug 'vim-airline/vim-airline'
 	Plug 'ryanoasis/vim-devicons'
 	Plug 'vim-airline/vim-airline-themes'       
+	Plug 'wakatime/vim-wakatime'
+	Plug 'morhetz/gruvbox'
 
 call plug#end()
+
+set background=dark
+colorscheme gruvbox
 
 if !exists('g:airline_symbols')
   let g:airline_symbols = {}
 endif
-
+let g:airline_theme='base16_gruvbox_dark_hard'
 " powerline symbols
-let g:airline_left_sep = ''
-let g:airline_left_alt_sep = ''
-let g:airline_right_sep = ''
-let g:airline_right_alt_sep = ''
+let g:airline_left_sep = ''
+let g:airline_left_alt_sep = ''
+let g:airline_right_sep = ''
+let g:airline_right_alt_sep = ''
 let g:airline_symbols.branch = ''
 let g:airline_symbols.readonly = ''
 let g:airline_symbols.linenr = ' ☰ '

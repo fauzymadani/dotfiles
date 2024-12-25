@@ -1,14 +1,14 @@
 theme = "gruvbox_transparent"
 
 [editor.cursor-shape]
-insert = "bar"
+insert = "block"
 normal = "block"
-select = "underline"
+select = "block"
 
 [editor.statusline]
-left = ["mode", "spinner"]
+left = ["mode", "spinner", "workspace-diagnostics", "position-percentage"]
 center = ["file-name"]
-right = ["version-control", "diagnostics", "selections", "position", "file-encoding", "file-line-ending", "file-type", "position-percentage"]
+right = ["file-modification-indicator", "read-only-indicator" ,"version-control", "diagnostics", "selections", "position", "file-encoding", "file-line-ending", "file-type", "position-percentage"]
 separator = "│"
 mode.normal = "NORMAL"
 mode.insert = "INSERT"
@@ -16,8 +16,15 @@ mode.select = "SELECT"
 
 [editor]
 bufferline = "always"
+auto-pairs = true
+
 
 [editor.indent-guides]
 render = true
 character = "╎" # Some characters that work well: "▏", "┆", "┊", "⸽"
 skip-levels = 1
+
+[editor.lsp]
+display-messages = true
+enable = true
+display-inlay-hints = true

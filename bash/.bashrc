@@ -138,8 +138,13 @@ GruvboxAqua='\[\e[38;5;108m\]'       # Soft Aqua
 GruvboxBackground='\[\e[48;5;235m\]' # Background (if needed)
 NC='\[\e[0m\]'                       # No Color / Reset
 
-PS1="${GruvboxRed}[ ${GruvboxGreen}\u${GruvboxYellow}@${GruvboxBlue}\h${GruvboxPurple} ]${GruvboxAqua}:${GruvboxYellow} \W${NC} \\$ "
-#PS1="${GruvboxRed}[ ${GruvboxGreen}\u${GruvboxYellow}@${GruvboxBlue}\h${GruvboxPurple} ]${GruvboxAqua}:${GruvboxYellow}  \W${NC} \\$ "
+parse_git_branch() {
+             git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+}
+
+
+#PS1="${GruvboxRed}[ ${GruvboxGreen}\u${GruvboxYellow}@${GruvboxBlue}\h${GruvboxPurple} ]${GruvboxAqua}:${GruvboxYellow} \W${NC} \\$ "
+PS1="\n\[\e[0;34m\]┌─[\[\e[1;36m\u\e[0;34m\]]──[\e[1;37m\W\e[0;34m]──[\[\e[1;36m\]${HOSTNAME%%.*}\[\e[0;34m\]]\[\e[1;35m\]: \$\[\e[0;34m\]\n\[\e[0;34m\]└────╼ \[\e[1;35m\]>> \[\e[00;00m\]"
 
 # PS1="${Red}[ ${Blue}\u@\h${Red} ]${NC}: ${Red}\w${NC} \\$ "
 ##PS1
@@ -154,6 +159,7 @@ alias n='nvim'
 alias v='vim'
 alias nconf='cd ~/.config/nvim/'
 alias zellij='~/./zellij'
+alias list='apt list --upgradable'
 PATH=~/.console-ninja/.bin:$PATH
 
 export XDG_DATA_DIRS="/home/linuxbrew/.linuxbrew/share:$XDG_DATA_DIRS"

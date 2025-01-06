@@ -124,6 +124,7 @@ export NVM_DIR="$HOME/.nvm"
 #add neofetch on startup
 # neofetch
 #figlet -c -f ~/.local/share/fonts/figlet-fonts/3d.flf "debian" | lolcat
+pokemon-colorscripts -r
 
 #custom session-----------------------------------------------------------------------
 # PS1='\[\033[01;32m\]┌──${debian_chroot:+($debian_chroot)}(\[\033[01;36m\]\u\[\033[01;34m\]@\[\033[01;36m\]\h\[\033[01;32m\])-[\[\033[01;34m\]\w\[\033[01;32m\]]\n└─\[\033[00m\]\$ '
@@ -168,7 +169,7 @@ export XDG_DATA_DIRS="/home/linuxbrew/.linuxbrew/share:$XDG_DATA_DIRS"
 export PATH="$HOME/.config/emacs/bin:$PATH"
 
 #-------starship
-# eval "$(starship init bash)"
+eval "$(starship init bash)"
 # export LS_COLORS="$(vivid generate lava)"
 export PATH=$PATH:/home/fauzy/.nvm/versions/node/v20.17.0/bin
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
@@ -176,9 +177,16 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib
 export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig:$PKG_CONFIG_PATH
 #export PATH="$HOME/.local/bin:$PATH"
-export PROMPT_COMMAND=""
+#export PROMPT_COMMAND=""
 export PATH=$PATH:/home/fauzy/.nvm/versions/node/v20.17.0/bin
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/myenv/bin:$PATH"
 export PATH="$HOME/.composer/vendor/bin:$PATH"
 
+
+# fnm
+FNM_PATH="/home/fauzy/.local/share/fnm"
+if [ -d "$FNM_PATH" ]; then
+  export PATH="$FNM_PATH:$PATH"
+  eval "`fnm env`"
+fi

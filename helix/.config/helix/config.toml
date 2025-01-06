@@ -1,4 +1,4 @@
-theme = "gruvbox_transparent"
+theme = "nord"
 
 [editor.cursor-shape]
 insert = "block"

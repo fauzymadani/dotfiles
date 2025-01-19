@@ -124,7 +124,7 @@ export NVM_DIR="$HOME/.nvm"
 #add neofetch on startup
 # neofetch
 #figlet -c -f ~/.local/share/fonts/figlet-fonts/3d.flf "debian" | lolcat
-pokemon-colorscripts -r
+#pokemon-colorscripts -r
 
 #custom session-----------------------------------------------------------------------
 # PS1='\[\033[01;32m\]┌──${debian_chroot:+($debian_chroot)}(\[\033[01;36m\]\u\[\033[01;34m\]@\[\033[01;36m\]\h\[\033[01;32m\])-[\[\033[01;34m\]\w\[\033[01;32m\]]\n└─\[\033[00m\]\$ '
@@ -161,6 +161,9 @@ alias v='vim'
 alias nconf='cd ~/.config/nvim/'
 alias zellij='~/./zellij'
 alias list='apt list --upgradable'
+alias eww='~/eww/target/release/eww'
+alias cw='~/.config/chadwm/scripts/./change_wallpaper.sh'
+alias con='nmtui-connect'
 PATH=~/.console-ninja/.bin:$PATH
 
 export XDG_DATA_DIRS="/home/linuxbrew/.linuxbrew/share:$XDG_DATA_DIRS"
@@ -182,7 +185,8 @@ export PATH=$PATH:/home/fauzy/.nvm/versions/node/v20.17.0/bin
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/myenv/bin:$PATH"
 export PATH="$HOME/.composer/vendor/bin:$PATH"
-
+export PATH=$PATH:~/.eww/target/release
+export PATH=$PATH:~/.local/bin
 
 # fnm
 FNM_PATH="/home/fauzy/.local/share/fnm"

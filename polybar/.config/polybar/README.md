@@ -16,11 +16,4 @@ a polybar with nord theme, an iconic blueish cold colorscheme that still pleasan
 - Code New Roman Nerd Font
 - Roboto Sans
 
-# Installation
-```bash
-mv ~/.config/polybar ~/.config/polybar_backup # create backup (reccomended)
-git clone https://github.com/fauzymadani/polybar.nord.git ~/.config/polybar/
-cd ~/.config/polybar/ 
-chmod +x launch.sh
-```
 create file in `~/.owm-key` for storing openweather api key, for the `weather` module.

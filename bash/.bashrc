@@ -164,6 +164,8 @@ alias list='apt list --upgradable'
 alias eww='~/eww/target/release/eww'
 alias cw='~/.config/chadwm/scripts/./change_wallpaper.sh'
 alias con='nmtui-connect'
+alias music='tmux new-session -s $$ "tmux source-file ~/.ncmpcpp/tsession"'
+_trap_exit() { tmux kill-session -t $$; }
 PATH=~/.console-ninja/.bin:$PATH
 
 export XDG_DATA_DIRS="/home/linuxbrew/.linuxbrew/share:$XDG_DATA_DIRS"

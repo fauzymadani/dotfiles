@@ -164,6 +164,7 @@ alias list='apt list --upgradable'
 alias eww='~/eww/target/release/eww'
 alias cw='~/.config/chadwm/scripts/./change_wallpaper.sh'
 alias con='nmtui-connect'
+alias zdl='~/Downloads/ZdlEngine/./zdl'
 alias music='tmux new-session -s $$ "tmux source-file ~/.ncmpcpp/tsession"'
 _trap_exit() { tmux kill-session -t $$; }
 PATH=~/.console-ninja/.bin:$PATH
@@ -196,3 +197,4 @@ if [ -d "$FNM_PATH" ]; then
   export PATH="$FNM_PATH:$PATH"
   eval "`fnm env`"
 fi
+export PATH=$PATH:/opt/zen

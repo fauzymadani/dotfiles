@@ -211,9 +211,9 @@ client.unfocused        #b48ead #b48ead #b48ead #b48ead
 client.urgent           #ff4500 #ff4500 #ff4500 #ff4500 
 
 
-default_border pixel 0
+default_border pixel 2
 
-for_window [class=".*"] border pixel 0
+for_window [class=".*"] border pixel 2
 gaps inner 9
 gaps outer 7
 #gaps top 22  # Sesuaikan 22 dengan tinggi Polybar Anda (height = 22pt)

@@ -4,6 +4,9 @@ set number
 set laststatus=2
 set mouse=a
 set nowrap
+set clipboard=unnamedplus
+
+" Plugin
 call plug#begin('~/.vim/plugged')
          
 	"Plug 'vim-airline/vim-airline'
@@ -12,12 +15,25 @@ call plug#begin('~/.vim/plugged')
 	Plug 'wakatime/vim-wakatime'
 	"Plug 'morhetz/gruvbox'
 	"Plug 'wfxr/minimap.vim'
-  Plug 'nordtheme/vim'
+ 	Plug 'zacanger/angr.vim'
+	Plug 'whatyouhide/vim-gotham'
+	Plug 'itchyny/lightline.vim'
+	Plug 'liuchengxu/space-vim-dark'
 
 call plug#end()
 
 set background=dark
-colorscheme nord
+colorscheme gotham256
+let g:lightline = {
+      \ 'colorscheme': 'one',
+      \ 'active': {
+      \   'left': [ [ 'mode', 'paste' ],
+      \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
+      \ },
+      \ 'component_function': {
+      \   'gitbranch': 'FugitiveHead'
+      \ },
+      \ }
 
 "hi MinimapCurrentLine ctermfg=Green guifg=#50FA7B guibg=#32302f
 "let g:minimap_width = 8

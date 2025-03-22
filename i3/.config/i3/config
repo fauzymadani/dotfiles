@@ -215,7 +215,7 @@ default_border pixel 2
 
 for_window [class=".*"] border pixel 2
 gaps inner 9
-gaps outer 7
+gaps outer 5
 #gaps top 22  # Sesuaikan 22 dengan tinggi Polybar Anda (height = 22pt)
 
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh

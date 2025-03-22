@@ -1,2 +1,13 @@
-@theme "~/.config/rofi/launchers/type-2/style-2.rasi"
-@import "~/.config/rofi/colors/nord.rasi"
+//@theme "~/.config/rofi/launchers/type-2/style-2.rasi"
+//@import "~/.config/rofi/colors/nord.rasi"
+//@theme "/usr/share/rofi/themes/Arc-Dark.rasi"
+//@theme "/usr/share/rofi/themes/android_notification.rasi"
+//@theme "/usr/share/rofi/themes/Monokai.rasi"
+configuration {
+ modi: "window,drun,ssh,combi";
+ font: "hack 10";
+ combi-modi: "window,drun,ssh";
+ }
+@theme "~/.config/rofi/themes/dtos-center.rasi"
+
+

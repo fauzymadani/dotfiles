@@ -145,7 +145,7 @@ parse_git_branch() {
 
 
 #PS1="${GruvboxRed}[ ${GruvboxGreen}\u${GruvboxYellow}@${GruvboxBlue}\h${GruvboxPurple} ]${GruvboxAqua}:${GruvboxYellow} \W${NC} \\$ "
-PS1="\n\[\e[0;34m\]┌─[\[\e[1;36m\u\e[0;34m\]]──[\e[1;37m\W\e[0;34m]──[\[\e[1;36m\]${HOSTNAME%%.*}\[\e[0;34m\]]\[\e[1;35m\]: \$\[\e[0;34m\]\n\[\e[0;34m\]└────╼ \[\e[1;35m\]>> \[\e[00;00m\]"
+#PS1="\n\[\e[0;34m\]┌─[\[\e[1;36m\u\e[0;34m\]]──[\e[1;37m\W\e[0;34m]──[\[\e[1;36m\]${HOSTNAME%%.*}\[\e[0;34m\]]\[\e[1;35m\]: \$\[\e[0;34m\]\n\[\e[0;34m\]└────╼ \[\e[1;35m\]>> \[\e[00;00m\]"
 
 # PS1="${Red}[ ${Blue}\u@\h${Red} ]${NC}: ${Red}\w${NC} \\$ "
 ##PS1
@@ -166,8 +166,10 @@ alias cw='~/.config/chadwm/scripts/./change_wallpaper.sh'
 alias con='nmtui-connect'
 alias zdl='~/Downloads/ZdlEngine/./zdl'
 alias music='tmux new-session -s $$ "tmux source-file ~/.ncmpcpp/tsession"'
+alias chadfetch='~/.config/chadwm/scripts/./fetch'
 _trap_exit() { tmux kill-session -t $$; }
 PATH=~/.console-ninja/.bin:$PATH
+PROMPT_DIRTRIM=1
 
 export XDG_DATA_DIRS="/home/linuxbrew/.linuxbrew/share:$XDG_DATA_DIRS"
 . "$HOME/.cargo/env"
@@ -175,7 +177,7 @@ export XDG_DATA_DIRS="/home/linuxbrew/.linuxbrew/share:$XDG_DATA_DIRS"
 export PATH="$HOME/.config/emacs/bin:$PATH"
 
 #-------starship
-eval "$(starship init bash)"
+# eval "$(starship init bash)"
 # export LS_COLORS="$(vivid generate lava)"
 export PATH=$PATH:/home/fauzy/.nvm/versions/node/v20.17.0/bin
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
@@ -190,6 +192,10 @@ export PATH="$HOME/myenv/bin:$PATH"
 export PATH="$HOME/.composer/vendor/bin:$PATH"
 export PATH=$PATH:~/.eww/target/release
 export PATH=$PATH:~/.local/bin
+export WINEPREFIX=~/.wine
+export WINEARCH=win64
+# alias notify-send="herbe"
+
 
 # fnm
 FNM_PATH="/home/fauzy/.local/share/fnm"
@@ -198,3 +204,4 @@ if [ -d "$FNM_PATH" ]; then
   eval "`fnm env`"
 fi
 export PATH=$PATH:/opt/zen
+export LD_LIBRARY_PATH=/home/fauzy/Downloads/icecat/icecat:$LD_LIBRARY_PATH

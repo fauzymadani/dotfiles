@@ -203,6 +203,11 @@ exec --no-startup-id feh --randomize --bg-fill /home/fauzy/Downloads/wallpaper/N
 #        separator_symbol "" \
 #        font pango:Hack Nerd Font 10
 #}
+# bar {
+#         tray_output none
+#	status_command ~/bumblebee-status/bumblebee-status -m cpu memory battery time \
+#		pasink pasource -p time.format="%H:%M" -t iceberg-powerline
+# }
 
 # Warna border untuk jendela yang fokus
 client.focused          #88c0d0 #88c0d0 #88c0d0 #88c0d0
@@ -218,8 +223,9 @@ gaps inner 9
 gaps outer 5
 #gaps top 22  # Sesuaikan 22 dengan tinggi Polybar Anda (height = 22pt)
 
-exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+# exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 # exec --no-startup-id bash ~/.config/polybar/launch.sh --cuts
+exec_always --no-startup-id polybar --config=/home/fauzy/.config/polybar/theme/greeny/config.ini main
 
 # exec --no-startup-id picom -b
 # gpg key manager

@@ -1,4 +1,4 @@
-theme = "nord"
+theme = "jellybeans"
 
 [editor.cursor-shape]
 insert = "block"

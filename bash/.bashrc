@@ -115,13 +115,13 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
-export PATH=$PATH:/opt/ghidra_11.1_PUBLIC/ghidraRun
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"                   # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" # This loads nvm bash_completion
 
 #add neofetch on startup
+# salut
 # neofetch
 #figlet -c -f ~/.local/share/fonts/figlet-fonts/3d.flf "debian" | lolcat
 #pokemon-colorscripts -r
@@ -143,7 +143,7 @@ parse_git_branch() {
              git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
 }
 
-
+PS1='\n\[\e[1;33m\](\t)\[\e[m\] \[\e[1;36m\][ \u |\[\e[m\] \[\e[1;32m\W\[\e[m\] \[\e[1;36m\]]\[\e[m\] $(parse_git_branch)\n> '
 #PS1="${GruvboxRed}[ ${GruvboxGreen}\u${GruvboxYellow}@${GruvboxBlue}\h${GruvboxPurple} ]${GruvboxAqua}:${GruvboxYellow} \W${NC} \\$ "
 #PS1="\n\[\e[0;34m\]┌─[\[\e[1;36m\u\e[0;34m\]]──[\e[1;37m\W\e[0;34m]──[\[\e[1;36m\]${HOSTNAME%%.*}\[\e[0;34m\]]\[\e[1;35m\]: \$\[\e[0;34m\]\n\[\e[0;34m\]└────╼ \[\e[1;35m\]>> \[\e[00;00m\]"
 
@@ -153,7 +153,6 @@ parse_git_branch() {
 # end custom------------------------------------------------------------------------------------------------------------------
 
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-export PATH="$PATH:/snap/bin"
 export PATH="/usr/bin:$PATH"
 # alias ls='lsd'
 alias n='nvim'
@@ -166,8 +165,12 @@ alias cw='~/.config/chadwm/scripts/./change_wallpaper.sh'
 alias con='nmtui-connect'
 alias zdl='~/Downloads/ZdlEngine/./zdl'
 alias music='tmux new-session -s $$ "tmux source-file ~/.ncmpcpp/tsession"'
+alias bar='~/dwm-6.5/bar.sh'
 alias chadfetch='~/.config/chadwm/scripts/./fetch'
-_trap_exit() { tmux kill-session -t $$; }
+alias tjournal='~/unixporn-material/tjournal'
+export PATH="$HOME/.local/kitty.app/bin:$PATH"
+# alias icat="kitten icat"
+# _trap_exit() { tmux kill-session -t $$; }
 PATH=~/.console-ninja/.bin:$PATH
 PROMPT_DIRTRIM=1
 
@@ -177,8 +180,7 @@ export XDG_DATA_DIRS="/home/linuxbrew/.linuxbrew/share:$XDG_DATA_DIRS"
 export PATH="$HOME/.config/emacs/bin:$PATH"
 
 #-------starship
-# eval "$(starship init bash)"
-# export LS_COLORS="$(vivid generate lava)"
+eval "$(starship init bash)"
 export PATH=$PATH:/home/fauzy/.nvm/versions/node/v20.17.0/bin
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
@@ -186,7 +188,7 @@ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib
 export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig:$PKG_CONFIG_PATH
 #export PATH="$HOME/.local/bin:$PATH"
 #export PROMPT_COMMAND=""
-export PATH=$PATH:/home/fauzy/.nvm/versions/node/v20.17.0/bin
+# export PATH=$PATH:/home/fauzy/.nvm/versions/node/v20.17.0/bin
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/myenv/bin:$PATH"
 export PATH="$HOME/.composer/vendor/bin:$PATH"
@@ -194,6 +196,10 @@ export PATH=$PATH:~/.eww/target/release
 export PATH=$PATH:~/.local/bin
 export WINEPREFIX=~/.wine
 export WINEARCH=win64
+export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
+export PATH="$HOME/.spicetify:$PATH"
+# export MANPAGER="vim -M +MANPAGER -"
+
 # alias notify-send="herbe"
 
 
@@ -205,3 +211,6 @@ if [ -d "$FNM_PATH" ]; then
 fi
 export PATH=$PATH:/opt/zen
 export LD_LIBRARY_PATH=/home/fauzy/Downloads/icecat/icecat:$LD_LIBRARY_PATH
+export PATH="$HOME/window-manager/squash:$PATH"
+
+export PATH=$PATH:/home/fauzy/.spicetify

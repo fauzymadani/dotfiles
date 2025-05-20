@@ -1,4 +1,8 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+> [!WARNING]
+> Not actively maintained, some of the configuration may break you system if you're not configured it correctly. and use it with caution.
+
 # dotfiles
 this is my personal config in debian 12. 
 requirements:

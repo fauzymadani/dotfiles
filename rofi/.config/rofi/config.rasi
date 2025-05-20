@@ -8,6 +8,6 @@ configuration {
  font: "hack 10";
  combi-modi: "window,drun,ssh";
  }
-@theme "~/.config/rofi/themes/dtos-center.rasi"
+@theme "~/.config/rofi/themes/dark-default.rasi"
 
 

@@ -7,7 +7,7 @@ const fetchPrice = async (curr) => {
   const data = await response.json();
 
   //const primaryColor = "#ebcb8b";
-  const bluenord = "#81a1c1"
+  const bluenord = "#444444"
   console.log(`%{F${bluenord}}BTC%{F-} $${Math.floor(data.market_data.current_price.usd).toLocaleString()}`);
 };
 

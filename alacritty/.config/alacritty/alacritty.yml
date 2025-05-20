@@ -1,6 +1,3 @@
-import:
-  /home/fauzy/.config/alacritty/alacritty.yml
-
 #env:
 #TERM: alacritty
 
@@ -21,19 +18,19 @@ window:
 
 font:
   normal:
-    family: JetBrains Mono Nerd Font
+    family: Terminus
     style: Regular
 
   bold:
-    family: JetBrains Mono Nerd Font
+    family: Terminus
     style: Bold
 
   italic:
-    family: JetBrains Mono Nerd Fons
+    family: Terminus
     style: Italic
 
   bold_italic:
-    family: JetBrains Mono Nerd Font Bold
+    family: Terminus
     style: Bold Italic
 
   size: 10.0
@@ -48,33 +45,34 @@ font:
   #  y: 0
 
   #builtin_box_drawing: true
-colors:
+  colors:
   # Default colors
   primary:
-    background: "0x000000"
-    foreground: '0xd7d0c7'
+    background: '0x101010'
+    foreground: '0xd2c5bc'
 
   # Normal colors
   normal:
-    black:   '0x101010'
-    red:     '0xe84f4f'
-    green:   '0xb8d68c'
-    yellow:  '0xe1aa5d'
-    blue:    '0x7dc1cf'
-    magenta: '0x9b64fb'
-    cyan:    '0x70dbdb'
-    white:   '0xdddddd'
+    black:   '0x202020'
+    red:     '0xb91e2e'
+    green:   '0x81957c'
+    yellow:  '0xf9bb80'
+    blue:    '0x356579'
+    magenta: '0x2d2031'
+    cyan:    '0x0b3452'
+    white:   '0x909090'
 
   # Bright colors
   bright:
-    black:   '0x404040'
-    red:     '0xd23d3d'
-    green:   '0xa0cf5d'
-    yellow:  '0xf39d21'
-    blue:    '0x4e9fb1'
-    magenta: '0x8542ff'
-    cyan:    '0x33cccc'
-    white:   '0xdddddd'
+    black:   '0x606060'
+    red:     '0xd14548'
+    green:   '0xa7b79a'
+    yellow:  '0xfae3a0'
+    blue:    '0x7491a1'
+    magenta: '0x87314e'
+    cyan:    '0x0f829d'
+    white:   '0xfff0f0'
+
 
   cursor:
     text: CellBackground

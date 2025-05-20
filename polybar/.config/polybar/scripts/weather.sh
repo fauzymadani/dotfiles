@@ -11,16 +11,16 @@ LANG="en"
 UNITS="metric"
 
 # Nord Theme Colors
-COLOR_CLOUD="#81A1C1"
-COLOR_THUNDER="#88C0D0"
-COLOR_LIGHT_RAIN="#8FBCBB"
-COLOR_HEAVY_RAIN="#88C0D0"
-COLOR_SNOW="#E5E9F0"
-COLOR_FOG="#4C566A"
-COLOR_TORNADO="#D08770"
-COLOR_SUN="#EBCB8B"
-COLOR_MOON="#ECEFF4"
-COLOR_ERR="#BF616A"
+COLOR_CLOUD="#a6adc8"       # overlay1
+COLOR_THUNDER="#313244"     # surface0
+COLOR_LIGHT_RAIN="#bac2de"  # overlay2
+COLOR_HEAVY_RAIN="#45475a"  # surface1
+COLOR_SNOW="#f2cdcd"        # rosewater
+COLOR_FOG="#585b70"         # surface2
+COLOR_TORNADO="#cdd6f4"     # text
+COLOR_SUN="#f9e2af"         # yellow
+COLOR_MOON="#1e1e2e"        # base
+COLOR_ERR="#f38ba8"         # red
 
 # Fetch weather data
 if [ -z "$CITY_NAME" ]; then

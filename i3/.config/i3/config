@@ -9,7 +9,7 @@
 #
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
-set $mod Mod4
+set $mod Mod1
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -49,15 +49,14 @@ floating_modifier $mod
 tiling_drag modifier titlebar
 
 # start a terminal
-bindsym $mod+Return exec st
+bindsym Shift+$mod+Return exec /home/fauzy/.local/kitty.app/bin/kitty
 
 # kill focused window
-bindsym $mod+Shift+q kill
+bindsym $mod+Shift+c kill
 
 # start dmenu (a program launcher)
 # bindsym $mod+d exec --no-startup-id dmenu_run
-bindsym $mod+d exec rofi -show drun -show-icons
-bindsym $mod+p exec ~/.local/bin/rofi-powermenu.sh
+bindsym $mod+p exec rofi -show drun -show-icons
 
 
 # A more modern dmenu replacement is rofi:
@@ -153,7 +152,7 @@ bindsym $mod+Shift+9 move container to workspace number $ws9
 bindsym $mod+Shift+0 move container to workspace number $ws10
 
 # reload the configuration file
-bindsym $mod+Shift+c reload
+bindsym $mod+Shift+t reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
@@ -189,12 +188,8 @@ bindsym $mod+c exec google-chrome
 bindsym $mod+q exec thunar
 bindsym $mod+Print exec flameshot gui
 # Tambah kecerahan
-bindsym $mod+Mod1+Up exec brightnessctl set +10%
 
-# Kurangi kecerahan
-bindsym $mod+Mod1+Down exec brightnessctl set 10%-
-
-exec --no-startup-id feh --randomize --bg-fill /home/fauzy/Downloads/wallpaper/Nord/
+exec --no-startup-id feh --bg-fill /home/fauzy/Downloads/wallpaper/catpuccin/cat_leaves.png
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 # bar {
@@ -210,22 +205,21 @@ exec --no-startup-id feh --randomize --bg-fill /home/fauzy/Downloads/wallpaper/N
 # }
 
 # Warna border untuk jendela yang fokus
-client.focused          #88c0d0 #88c0d0 #88c0d0 #88c0d0
-client.focused_inactive #5e81ac #5e81ac #5e81ac #5e81ac
-client.unfocused        #b48ead #b48ead #b48ead #b48ead
-client.urgent           #ff4500 #ff4500 #ff4500 #ff4500 
-
+client.focused          #f5c2e7 #f5c2e7 #1e1e2e #f5c2e7
+client.focused_inactive #cba6f7 #cba6f7 #1e1e2e #cba6f7
+client.unfocused        #988ba2 #988ba2 #1e1e2e #988ba2
+client.urgent           #f38ba8 #f38ba8 #1e1e2e #f38ba8
 
 default_border pixel 2
 
 for_window [class=".*"] border pixel 2
 gaps inner 9
-gaps outer 5
+gaps outer 3
 #gaps top 22  # Sesuaikan 22 dengan tinggi Polybar Anda (height = 22pt)
 
-# exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 # exec --no-startup-id bash ~/.config/polybar/launch.sh --cuts
-exec_always --no-startup-id polybar --config=/home/fauzy/.config/polybar/theme/greeny/config.ini main
+# exec_always --no-startup-id polybar --config=/home/fauzy/.config/polybar/theme/greeny/config.ini main
 
 # exec --no-startup-id picom -b
 # gpg key manager

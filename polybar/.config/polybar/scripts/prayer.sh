@@ -106,4 +106,5 @@ hours=$((time_left_seconds / 3600))
 minutes=$(((time_left_seconds % 3600) / 60))
 
 # Output in a nice format with polybar color formatting
-printf "%%{F#7E9CD8}%s in %02d:%02d%%{F-}" "$next_prayer_name" "$hours" "$minutes"
+printf "%%{F#444444}%s in %02d:%02d%%{F-}" "$next_prayer_name" "$hours" "$minutes"
+

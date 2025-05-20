@@ -190,7 +190,7 @@ export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig:$PKG_CONFIG_PATH
 #export PROMPT_COMMAND=""
 # export PATH=$PATH:/home/fauzy/.nvm/versions/node/v20.17.0/bin
 export PATH="$HOME/.local/bin:$PATH"
-export PATH="$HOME/myenv/bin:$PATH"
+# export PATH="$HOME/myenv/bin:$PATH"
 export PATH="$HOME/.composer/vendor/bin:$PATH"
 export PATH=$PATH:~/.eww/target/release
 export PATH=$PATH:~/.local/bin
@@ -198,8 +198,11 @@ export WINEPREFIX=~/.wine
 export WINEARCH=win64
 export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
 export PATH="$HOME/.spicetify:$PATH"
+# export DISPLAY=$(echo $DISPLAY)
 # export MANPAGER="vim -M +MANPAGER -"
-
+export EDITOR=vim
+alias seamonkey='/home/fauzy/Downloads/seamonkey/seamonkey'
+alias palemoon='/home/fauzy/Downloads/Palemoon/palemoon/palemoon'
 # alias notify-send="herbe"
 
 
@@ -214,3 +217,7 @@ export LD_LIBRARY_PATH=/home/fauzy/Downloads/icecat/icecat:$LD_LIBRARY_PATH
 export PATH="$HOME/window-manager/squash:$PATH"
 
 export PATH=$PATH:/home/fauzy/.spicetify
+export PATH=$PATH:/usr/local/go/bin
+export QT_QPA_PLATFORMTHEME=qt5ct
+
+alias templeos=
